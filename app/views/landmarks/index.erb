@@ -1,0 +1,14 @@
+<h1>Famous NYC Landmarks</h1>
+
+<%@landmarks.each do |landmark|%>
+  <h3><%=landmark.name%></h3>
+    <%if landmark.figure%>
+      <p>Landmark Figure: <%=landmark.figure.name%></p>
+    <% end %>
+
+    <%if landmark.year_completed%>
+      <p>Year Completed: <%=landmark.year_completed%></p>
+    <% end %>
+
+    <br><br>
+<% end %>

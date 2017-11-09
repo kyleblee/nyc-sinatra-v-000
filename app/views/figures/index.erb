@@ -1,0 +1,22 @@
+<h1>Famous NYC Figures</h1>
+
+<%@figures.each do |figure|%>
+  <h3><%=figure.name%></h3>
+    <%if !figure.titles.empty?%>
+      <p>Figure Titles</p>
+        <ul>
+          <%figure.titles.each do |title|%>
+            <li><%=title.name%></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+    <%if !figure.landmarks.empty?%>
+      <p>Figure Landmarks</p>
+        <ul>
+          <%figure.landmarks.each do |landmark|%>
+            <li><%=landmark.name%></li>
+          <% end %>
+        </ul>
+    <% end %><br><br>
+<% end %>
